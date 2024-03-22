@@ -68,6 +68,7 @@ Bu şirket çalışanlarını gözetlemek istiyor. Göreviniz aşağıdakileri y
 
     if (value.toLowerCase().includes("evil corp.")) {
       value = value.replace(/evil corp\./gi, "Good Corp.");
+      evilCorpDetected = true;
       console.log(infractionMessage);
     }
 
@@ -88,6 +89,7 @@ Bu şirket çalışanlarını gözetlemek istiyor. Göreviniz aşağıdakileri y
       <textarea
         placeholder="Raporunuzu buraya yazın..."
         onChange={handleChange}
+        value={userInput}
       />
     </div>
   );
